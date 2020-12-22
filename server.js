@@ -43,12 +43,16 @@ var characters = [
 
 // Basic route that sends the user first to the AJAX Page
 app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "view.html"));
+  res.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/add", function(req, res) {
-  res.sendFile(path.join(__dirname, "add.html"));
+  res.sendFile(path.join(__dirname, "form.html"));
 });
+
+app.get("/add", function(req, res) {
+    res.sendFile(path.join(__dirname, "views.html"));
+  });
 
 // Displays all characters
 app.get("/api/characters", function(req, res) {
