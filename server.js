@@ -34,12 +34,12 @@ app.get("/add", function(req, res) {
 
 
 // Displays all reservations
-app.get("/api/characters", function(req, res) {
+app.get("/api/customer", function(req, res) {
   return res.json(customer);
 });
 
 // Displays a single table, or returns false
-app.get("/api/characters/:character", function(req, res) {
+app.get("/api/customer/:customer", function(req, res) {
   var chosen = req.params.customer;
 
   console.log(chosen);
