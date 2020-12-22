@@ -1,7 +1,4 @@
 var reservationsApi = require("./reservations")
-var reservations = reservationsApi.getReservations()
-var current = reservations.current
-var waiting = reservations.waitingList
 
 // Dependencies
 // =============================================================
@@ -58,18 +55,8 @@ app.get("/api/characters/:character", function(req, res) {
 
 app.post("/api/customer", function(req, res) {
     var newCustomer = req.body;
-    reservationsApi.addReservation(newCustomer)
-  
-
-  // Using a RegEx Pattern to remove spaces from newCharacter
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  newCustomer.routeName = newCustomer.name.replace(/\s+/g, "").toLowerCase();
-
-  console.log(newCustomer);
-
-  customer.push(newCustomer);
-
-  res.json(newCustomer);
+    reservationsApi.addReservation(newCustomer);
+    res.send(newCustomer)
 });
 
 // Starts the server to begin listening
