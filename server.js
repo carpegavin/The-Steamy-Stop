@@ -59,7 +59,7 @@ app.get("/api/characters/:character", function(req, res) {
 app.post("/api/customer", function(req, res) {
     var newCustomer = req.body;
     reservationsApi.addReservation(newCustomer)
-  });
+  
 
   // Using a RegEx Pattern to remove spaces from newCharacter
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
