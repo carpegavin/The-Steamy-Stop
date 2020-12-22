@@ -1,3 +1,10 @@
+var reservationsApi = require("./reservations")
+var reservations = reservationsApi.getReservations()
+var current = reservations.current
+var waiting = reservations.waitingList
+
+
+
 // Reservation Information (DATA)
 // =============================================================
 var reservations = [

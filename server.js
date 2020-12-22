@@ -1,3 +1,8 @@
+var reservationsApi = require("./reservations")
+var reservations = reservationsApi.getReservations()
+var current = reservations.current
+var waiting = reservations.waitingList
+
 // Dependencies
 // =============================================================
 var express = require("express");
@@ -63,7 +68,7 @@ app.post("/api/customer", function(req, res) {
 
   console.log(newCustomer);
 
-  characters.push(newCustomer);
+  customer.push(newCustomer);
 
   res.json(newCustomer);
 });
