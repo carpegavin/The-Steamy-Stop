@@ -56,11 +56,10 @@ app.get("/api/characters/:character", function(req, res) {
   return res.json(false);
 });
 
-// Create New Customer - takes in JSON input
 app.post("/api/customer", function(req, res) {
-  // req.body hosts is equal to the JSON post sent from the user
-  // This works because of our body parsing middleware
-  var newCustomer = req.body;
+    var newCustomer = req.body;
+    reservationsApi.addReservation(newCustomer)
+  
 
   // Using a RegEx Pattern to remove spaces from newCharacter
   // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
