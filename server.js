@@ -23,7 +23,7 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "home.html"));
 });
 
-app.get("/add", function(req, res) {
+app.get("/Document", function(req, res) {
   res.sendFile(path.join(__dirname, "form.html"));
 });
 
